@@ -2,8 +2,11 @@ import React from 'react'
 
 export default function Main() {
   return (
-    <div>
-      <h1>Main</h1>
+    <div className='imgContainer'>
+      <img src="mars.png" alt='mars-demo-picture' 
+      className='bgImage'/>
     </div>
+      
+   
   )
 }
