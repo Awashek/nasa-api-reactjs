@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <SideBar />
+      <SideBar> asdasd</SideBar>
       <Main />
       <Footer />
     </>
