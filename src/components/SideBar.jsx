@@ -4,7 +4,7 @@ export default function SideBar(props) {
   const {handelToggelModel} = props
   return (
      <div className='sidebar'>
-        <div onClick={handelToggelModel}  className='bgOverlay'></div>
+        <div onClick={handelToggelModel} className='bgOverlay'></div>
           <div className='sidebarContents'>
             <h2>The Brutal Martian Landscape</h2>  
             <div>
