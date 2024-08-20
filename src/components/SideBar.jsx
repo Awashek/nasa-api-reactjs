@@ -10,7 +10,7 @@ export default function SideBar(props) {
             <div>
               <p>Description</p>
               <p>ashvjadhjhwda asbdajbasdkads adbkjadb
-                asvhjdasvjhadsbadsjbadk
+                asvhjdasvjhadsbadsjbadk awdad
               </p>
             </div>
             <button onClick={handelToggelModel}>
