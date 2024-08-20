@@ -12,6 +12,9 @@ export default function SideBar() {
                 asvhjdasvjhadsbadsjbadk
               </p>
             </div>
+            <button>
+            <i className="fa-solid fa-arrow-right"></i>
+            </button>
         </div>
     </div> 
   )
