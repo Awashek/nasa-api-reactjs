@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function SideBar() {
+export default function SideBar(props) {
+  const {handelToggelModel} = props
   return (
      <div className='sidebar'>
-        <div className='bgOverLay'></div>
+        <div onClick={handelToggelModel}  className='bgOverlay'></div>
           <div className='sidebarContents'>
             <h2>The Brutal Martian Landscape</h2>  
             <div>
@@ -12,7 +13,7 @@ export default function SideBar() {
                 asvhjdasvjhadsbadsjbadk
               </p>
             </div>
-            <button>
+            <button onClick={handelToggelModel}>
             <i className="fa-solid fa-arrow-right"></i>
             </button>
         </div>
