@@ -7,7 +7,6 @@ function App() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(false)
 
-
   const [showModel, setShowModel] = useState(false);
 
   const handelToggelModel = () => {
@@ -29,6 +28,7 @@ function App() {
           console.log('fetched from today')
           return  
       }
+
       localStorage.clear()
       try {
         const res = await fetch(url)
@@ -41,6 +41,7 @@ function App() {
         console.log(err.message)
       }
     }
+    
     fetchAPIData()
   },[ ])
 
