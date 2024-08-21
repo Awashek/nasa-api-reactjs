@@ -2,7 +2,12 @@ import { useEffect, useState } from "react"
 import Footer from "./components/Footer"
 import Main from "./components/Main"
 import SideBar from "./components/SideBar"
+
 function App() {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(false)
+
+
   const [showModel, setShowModel] = useState(false);
 
   const handelToggelModel = () => {
@@ -16,8 +21,9 @@ function App() {
       `?api_key=${NASA_KEY}`
       try {
         const res = await fetch(url)
-        const data = await res.json()
-        console.log('Data\n,', data)
+        const apiData = await res.json()
+        setData(apiData)
+        console.log('Data\n,', apiData)
       } catch(err) {
         console.log(err.message)
       }
@@ -27,11 +33,16 @@ function App() {
 
   return (
     <>
-      <Main />
+      {data ? (<Main data={data}/>) : (
+        <div className="loadingState">
+          <i className="fa-solid fa-gear"></i>
+        </div>
+
+      )}
       {showModel && (
-        <SideBar handelToggelModel = {handelToggelModel}/>
+        <SideBar data={data} handelToggelModel = {handelToggelModel}/>
         )}
-      <Footer handelToggelModel = {handelToggelModel}/>
+      <Footer data={data} handelToggelModel = {handelToggelModel}/>
     </>
   )
 }
